@@ -5,28 +5,19 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>CruzCutz | Modern Fades & Sharp Lines</title>
     <meta name="description" content="Professional barber offering modern cuts and clean fades. Fast replies, easy booking, fresh cuts.">
-    
-    <!-- Favicon -->
     <link rel="icon" href="CruzCutz.jpg" type="image/jpeg">
-    
-    <!-- Google Fonts -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;600;800&family=Playfair+Display:ital,wght@0,700;1,700&display=swap" rel="stylesheet">
-    
-    <link rel="stylesheet" href="style.css">
-    
-    <!-- Font Awesome for Icons -->
+    <link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&family=DM+Sans:wght@300;400;500;700&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link rel="stylesheet" href="style.css">
 </head>
 <body>
 
-    <!-- Scroll Progress Bar -->
     <div class="scroll-progress-container">
         <div class="scroll-progress-bar" id="scrollBar"></div>
     </div>
 
-    <!-- Sticky Mobile CTA -->
     <a href="#cal" class="mobile-sticky-cta" id="mobileStickyCta">
         <i class="far fa-calendar-alt"></i> Book Now
     </a>
@@ -34,71 +25,138 @@
     <!-- Navigation -->
     <nav class="navbar">
         <div class="nav-container">
-            <a href="#" class="logo" style="display: flex; align-items: center; gap: 10px;">
-                <img src="CruzCutz.jpg" alt="CruzCutz Logo" style="height: 40px; width: auto; border-radius: 6px;">
-                <span style="font-family: var(--font-heading); font-size: 1.5rem; font-weight: bold; color: white;">Cruz<span class="highlight-red">Cuts</span></span>
+            <a href="#" class="logo">
+                <img src="CruzCutz.jpg" alt="CruzCutz Logo">
+                <span>Cruz<em>Cutz</em></span>
             </a>
-            
-            <!-- Hamburger Menu Icon -->
             <div class="hamburger" id="hamburger">
                 <i class="fas fa-bars"></i>
             </div>
-
-            <ul class="nav-links" id="navLinks">
-                <li><a href="#about">About</a></li>
-                <li><a href="#services">Services</a></li>
-                <li><a href="#gallery">Gallery</a></li>
-                <li><a href="#reviews">Reviews</a></li>
-            </ul>
-            <a href="https://www.instagram.com/cruzcutz10/" target="_blank" class="nav-btn"><i class="fab fa-instagram"></i> Book on IG</a>
+            <div class="nav-panel" id="navPanel">
+                <ul class="nav-links" id="navLinks">
+                    <li><a href="#home">Home</a></li>
+                    <li><a href="#about">About</a></li>
+                    <li><a href="#services">Services</a></li>
+                    <li><a href="#gallery">Gallery</a></li>
+                    <li><a href="#reviews">Reviews</a></li>
+                </ul>
+            </div>
+            <!-- Close button: fixed, shown via JS when menu opens -->
+            <button class="nav-close" id="navClose" aria-label="Close menu">
+                <i class="fas fa-times"></i>
+            </button>
+            <a href="https://www.instagram.com/cruzcutz10/" target="_blank" class="nav-btn">
+                <i class="fab fa-instagram"></i> Book on IG
+            </a>
         </div>
     </nav>
 
     <!-- Hero Section -->
     <header class="hero" id="home">
-        <!-- Background Video -->
         <div class="video-container">
             <video autoplay muted loop playsinline class="hero-video">
                 <source src="Hero Background Desktop.mp4" type="video/mp4">
             </video>
             <div class="video-overlay"></div>
         </div>
-        
         <div class="hero-content">
-            <h1 class="animate-fade-up delay-1">Clean fades.<br><span class="highlight-red">Sharp lines.</span></h1>
+            <h1 class="animate-fade-up delay-1">Clean<br><span class="fire">Fades.</span><br>Sharp Lines.</h1>
             <p class="subtitle animate-fade-up delay-2">Book your next cut in minutes.</p>
             <div class="hero-buttons animate-fade-up delay-3">
                 <a href="#cal" class="btn btn-primary">
                     <i class="far fa-calendar-alt"></i> Book on Cal.com
                 </a>
-                <a href="https://www.instagram.com/cruzcutz10/" target="_blank" rel="noopener noreferrer" class="btn btn-secondary">
+                <a href="https://www.instagram.com/cruzcutz10/" target="_blank" rel="noopener noreferrer" class="btn btn-ghost">
                     <i class="fab fa-instagram"></i> DM on Instagram
                 </a>
             </div>
         </div>
     </header>
 
+    <!-- Ticker -->
+    <div class="ticker-wrap">
+        <div class="ticker-track">
+            <!-- Set 1 -->
+            <span>Clean Fades</span><span class="sep">✦</span>
+            <span>Sharp Lineups</span><span class="sep">✦</span>
+            <span>Skin Fades</span><span class="sep">✦</span>
+            <span>Taper Fades</span><span class="sep">✦</span>
+            <span>Scissor Cuts</span><span class="sep">✦</span>
+            <span>Fresh Cuts</span><span class="sep">✦</span>
+            <span>CruzCutz</span><span class="sep">✦</span>
+            <!-- Set 2 -->
+            <span>Clean Fades</span><span class="sep">✦</span>
+            <span>Sharp Lineups</span><span class="sep">✦</span>
+            <span>Skin Fades</span><span class="sep">✦</span>
+            <span>Taper Fades</span><span class="sep">✦</span>
+            <span>Scissor Cuts</span><span class="sep">✦</span>
+            <span>Fresh Cuts</span><span class="sep">✦</span>
+            <span>CruzCutz</span><span class="sep">✦</span>
+            <!-- Set 3 -->
+            <span>Clean Fades</span><span class="sep">✦</span>
+            <span>Sharp Lineups</span><span class="sep">✦</span>
+            <span>Skin Fades</span><span class="sep">✦</span>
+            <span>Taper Fades</span><span class="sep">✦</span>
+            <span>Scissor Cuts</span><span class="sep">✦</span>
+            <span>Fresh Cuts</span><span class="sep">✦</span>
+            <span>CruzCutz</span><span class="sep">✦</span>
+            <!-- Set 4 (exact copy of sets 1–3 for seamless loop) -->
+            <span>Clean Fades</span><span class="sep">✦</span>
+            <span>Sharp Lineups</span><span class="sep">✦</span>
+            <span>Skin Fades</span><span class="sep">✦</span>
+            <span>Taper Fades</span><span class="sep">✦</span>
+            <span>Scissor Cuts</span><span class="sep">✦</span>
+            <span>Fresh Cuts</span><span class="sep">✦</span>
+            <span>CruzCutz</span><span class="sep">✦</span>
+            <span>Clean Fades</span><span class="sep">✦</span>
+            <span>Sharp Lineups</span><span class="sep">✦</span>
+            <span>Skin Fades</span><span class="sep">✦</span>
+            <span>Taper Fades</span><span class="sep">✦</span>
+            <span>Scissor Cuts</span><span class="sep">✦</span>
+            <span>Fresh Cuts</span><span class="sep">✦</span>
+            <span>CruzCutz</span><span class="sep">✦</span>
+            <span>Clean Fades</span><span class="sep">✦</span>
+            <span>Sharp Lineups</span><span class="sep">✦</span>
+            <span>Skin Fades</span><span class="sep">✦</span>
+            <span>Taper Fades</span><span class="sep">✦</span>
+            <span>Scissor Cuts</span><span class="sep">✦</span>
+            <span>Fresh Cuts</span><span class="sep">✦</span>
+            <span>CruzCutz</span><span class="sep">✦</span>
+        </div>
+    </div>
+
     <!-- About Section -->
     <section class="about section" id="about">
         <div class="container fade-in">
-            <h2 class="section-title">The <span class="highlight-gold">Standard</span></h2>
-            <p class="about-desc">Professional barber offering modern cuts and clean fades. My focus is on precision, consistency, and style.</p>
-            
-            <div class="about-grid">
-                <div class="about-card">
-                    <div class="icon-box"><i class="fas fa-cut"></i></div>
-                    <h3>Clean Fades</h3>
-                    <p>Seamless blends tailored to your head shape.</p>
+            <div class="section-label">The Barber</div>
+            <h2 class="section-title">Meet <span class="fire">Jareld</span></h2>
+
+            <div class="barber-profile">
+                <div class="barber-photo-wrap">
+                    <div class="barber-photo-frame">
+                        <img src="Jareld.png" alt="Jareld - CruzCutz Barber" class="barber-photo">
+                    </div>
+                    <div class="barber-ig-badge">
+                        <a href="https://www.instagram.com/cruzcutz10/" target="_blank" rel="noopener noreferrer">
+                            <i class="fab fa-instagram"></i>
+                            <span>@cruzcutz10</span>
+                        </a>
+                    </div>
                 </div>
-                <div class="about-card">
-                    <div class="icon-box"><i class="fas fa-ruler"></i></div>
-                    <h3>Sharp Lineups</h3>
-                    <p>Crisp, straight edges for that perfect finish.</p>
-                </div>
-                <div class="about-card">
-                    <div class="icon-box"><i class="fas fa-clock"></i></div>
-                    <h3>Reliable Service</h3>
-                    <p>On time, professional, and consistent every time.</p>
+
+                <div class="barber-info">
+                    <h3 class="barber-name">Jareld</h3>
+                    <p class="barber-title">Independent Barber</p>
+
+                    <p class="barber-bio">Passionate about the craft since day one. I specialize in clean skin fades, sharp lineups, and textured scissor cuts — tailored to your style, your head shape, your vibe. Every client leaves the chair looking and feeling fresh. No sloppy cuts, no wasted time.</p>
+
+
+                    <div class="barber-specialties">
+                        <span class="specialty-tag"><i class="fas fa-cut"></i> Skin Fades</span>
+                        <span class="specialty-tag"><i class="fas fa-ruler"></i> Sharp Lineups</span>
+                        <span class="specialty-tag"><i class="fas fa-scissors"></i> Scissor Cuts</span>
+                        <span class="specialty-tag"><i class="fas fa-fire"></i> Taper Fades</span>
+                    </div>
                 </div>
             </div>
         </div>
@@ -107,33 +165,32 @@
     <!-- Services Section -->
     <section class="services section" id="services">
         <div class="container fade-in">
-            <h2 class="section-title">Premium <span class="highlight-red">Services</span></h2>
-            
+            <div class="section-label">What We Do</div>
+            <h2 class="section-title">Premium <span class="fire">Services</span></h2>
             <div class="services-grid">
                 <div class="service-card">
                     <div class="service-img" style="background-image: url('skinfade.png');"></div>
                     <div class="service-content">
+                        <div class="service-tag">Most Popular</div>
                         <h3>Skin Fade</h3>
                         <p>Flawless skin tight fades perfected to your head shape.</p>
-                        <span class="price">DM for Price</span>
+                        <a href="https://www.instagram.com/cruzcutz10/" target="_blank" class="service-link">DM for Price <i class="fas fa-arrow-right"></i></a>
                     </div>
                 </div>
-
                 <div class="service-card">
                     <div class="service-img" style="background-image: url('tapefade.webp');"></div>
                     <div class="service-content">
                         <h3>Taper Fade</h3>
                         <p>Clean and modern tapers leaving natural volume on top.</p>
-                        <span class="price">DM for Price</span>
+                        <a href="https://www.instagram.com/cruzcutz10/" target="_blank" class="service-link">DM for Price <i class="fas fa-arrow-right"></i></a>
                     </div>
                 </div>
-
                 <div class="service-card">
                     <div class="service-img" style="background-image: url('scissorwork.jpg');"></div>
                     <div class="service-content">
                         <h3>Scissor Cut</h3>
                         <p>Classic scissor work for texture, length, and perfect flow.</p>
-                        <span class="price">DM for Price</span>
+                        <a href="https://www.instagram.com/cruzcutz10/" target="_blank" class="service-link">DM for Price <i class="fas fa-arrow-right"></i></a>
                     </div>
                 </div>
             </div>
@@ -143,60 +200,73 @@
     <!-- Gallery Section -->
     <section class="gallery section" id="gallery">
         <div class="container fade-in">
-            <h2 class="section-title">The <span class="highlight-gold">Gallery</span></h2>
-            
+            <div class="section-label">The Work</div>
+            <h2 class="section-title">The <span class="fire">Gallery</span></h2>
+
             <div class="gallery-tabs">
                 <button class="tab-btn active" data-target="photos">Photos</button>
                 <button class="tab-btn" data-target="videos">Videos</button>
             </div>
 
             <div class="gallery-content" id="photos">
-                <div class="gallery-grid">
-                    <div class="gallery-item"><img src="https://images.unsplash.com/photo-1622286342621-4bd786c2447c?q=80&w=600&auto=format&fit=crop" alt="Haircut 1"></div>
-                    <div class="gallery-item"><img src="https://images.unsplash.com/photo-1599351431202-1e0f0137899a?q=80&w=600&auto=format&fit=crop" alt="Haircut 2"></div>
-                    <div class="gallery-item"><img src="https://images.unsplash.com/photo-1605497788044-5a32c7078486?q=80&w=600&auto=format&fit=crop" alt="Haircut 3"></div>
-                    <div class="gallery-item"><img src="https://images.unsplash.com/photo-1585747860715-2ba37e788b70?q=80&w=600&auto=format&fit=crop" alt="Haircut 4"></div>
-                    <div class="gallery-item"><img src="https://images.unsplash.com/photo-1503951914875-452162b0f3f1?q=80&w=600&auto=format&fit=crop" alt="Haircut 5"></div>
-                    <div class="gallery-item"><img src="https://images.unsplash.com/photo-1593702288056-ccbfcb03fae0?q=80&w=600&auto=format&fit=crop" alt="Haircut 6"></div>
+                <div class="gallery-grid" id="photoGrid">
+                    <div class="gallery-item"><img src="Curly fade cut.png" alt="Curly fade cut"></div>
+                    <div class="gallery-item"><img src="Taper fade back view.png" alt="Taper fade back view"></div>
+                    <div class="gallery-item"><img src="Mid fade side view.png" alt="Mid fade side view"></div>
+                    <div class="gallery-item"><img src="Skin fade side profile.png" alt="Skin fade side profile"></div>
+                    <div class="gallery-item"><img src="Textured cut back view.png" alt="Textured cut back view"></div>
+                    <div class="gallery-item"><img src="Curly taper fade.png" alt="Curly taper fade"></div>
+                    <div class="gallery-item"><img src="Low fade side view.png" alt="Low fade side view"></div>
+                </div>
+                <div class="show-more-wrap" id="photoShowMoreWrap">
+                    <button class="btn btn-outline show-more-btn" id="photoShowMore">
+                        Show More <i class="fas fa-chevron-down"></i>
+                    </button>
                 </div>
             </div>
 
             <div class="gallery-content hidden" id="videos">
-                <div class="gallery-grid video-grid">
-                    <!-- Instagram Reels Embeds (Iframely) -->
+                <div class="gallery-grid video-grid" id="videoGrid">
                     <div class="gallery-item video-embed">
-                        <div class="iframely-embed"><div class="iframely-responsive" style="height: 170px; padding-bottom: 0;"><a href="https://www.instagram.com/reel/DX5iUvRhLY_/" data-iframely-url="https://iframely.net/4UftTW1g?theme=dark"></a></div></div>
+                        <div class="iframely-embed"><div class="iframely-responsive" ><a href="https://www.instagram.com/reel/DX5iUvRhLY_/" data-iframely-url="https://iframely.net/4UftTW1g?theme=dark"></a></div></div>
                     </div>
                     <div class="gallery-item video-embed">
-                        <div class="iframely-embed"><div class="iframely-responsive" style="height: 170px; padding-bottom: 0;"><a href="https://www.instagram.com/reel/DXZ_4VsieKy/" data-iframely-url="https://iframely.net/26veAF99?theme=dark"></a></div></div>
+                        <div class="iframely-embed"><div class="iframely-responsive" ><a href="https://www.instagram.com/reel/DXZ_4VsieKy/" data-iframely-url="https://iframely.net/26veAF99?theme=dark"></a></div></div>
                     </div>
                     <div class="gallery-item video-embed">
-                        <div class="iframely-embed"><div class="iframely-responsive" style="height: 170px; padding-bottom: 0;"><a href="https://www.instagram.com/reel/DXZWENegWhs/" data-iframely-url="https://iframely.net/Sq5lDY9A?theme=dark"></a></div></div>
+                        <div class="iframely-embed"><div class="iframely-responsive" ><a href="https://www.instagram.com/reel/DXZWENegWhs/" data-iframely-url="https://iframely.net/Sq5lDY9A?theme=dark"></a></div></div>
                     </div>
                     <div class="gallery-item video-embed">
-                        <div class="iframely-embed"><div class="iframely-responsive" style="height: 170px; padding-bottom: 0;"><a href="https://www.instagram.com/reel/DW19kEXiV7X/" data-iframely-url="https://iframely.net/lnAs5Cfk?theme=dark"></a></div></div>
+                        <div class="iframely-embed"><div class="iframely-responsive" ><a href="https://www.instagram.com/reel/DW19kEXiV7X/" data-iframely-url="https://iframely.net/lnAs5Cfk?theme=dark"></a></div></div>
                     </div>
                     <div class="gallery-item video-embed">
-                        <div class="iframely-embed"><div class="iframely-responsive" style="height: 170px; padding-bottom: 0;"><a href="https://www.instagram.com/reel/DWcl4VaiUbh/" data-iframely-url="https://iframely.net/VxI58JGD?theme=dark"></a></div></div>
+                        <div class="iframely-embed"><div class="iframely-responsive" ><a href="https://www.instagram.com/reel/DWcl4VaiUbh/" data-iframely-url="https://iframely.net/VxI58JGD?theme=dark"></a></div></div>
                     </div>
                     <div class="gallery-item video-embed">
-                        <div class="iframely-embed"><div class="iframely-responsive" style="height: 170px; padding-bottom: 0;"><a href="https://www.instagram.com/reel/DWPwIFDib4M/" data-iframely-url="https://iframely.net/5GK2EYcf?theme=dark"></a></div></div>
+                        <div class="iframely-embed"><div class="iframely-responsive" ><a href="https://www.instagram.com/reel/DWPwIFDib4M/" data-iframely-url="https://iframely.net/5GK2EYcf?theme=dark"></a></div></div>
                     </div>
                     <div class="gallery-item video-embed">
-                        <div class="iframely-embed"><div class="iframely-responsive" style="height: 170px; padding-bottom: 0;"><a href="https://www.instagram.com/reel/DWLElIWAVhs/" data-iframely-url="https://iframely.net/RTdz47DH?theme=dark"></a></div></div>
+                        <div class="iframely-embed"><div class="iframely-responsive" ><a href="https://www.instagram.com/reel/DWLElIWAVhs/" data-iframely-url="https://iframely.net/RTdz47DH?theme=dark"></a></div></div>
                     </div>
                     <div class="gallery-item video-embed">
-                        <div class="iframely-embed"><div class="iframely-responsive" style="height: 170px; padding-bottom: 0;"><a href="https://www.instagram.com/reel/DVr-NHIAYpQ/" data-iframely-url="https://iframely.net/Kcz2KqQT?theme=dark"></a></div></div>
+                        <div class="iframely-embed"><div class="iframely-responsive" ><a href="https://www.instagram.com/reel/DVr-NHIAYpQ/" data-iframely-url="https://iframely.net/Kcz2KqQT?theme=dark"></a></div></div>
                     </div>
                     <div class="gallery-item video-embed">
-                        <div class="iframely-embed"><div class="iframely-responsive" style="height: 170px; padding-bottom: 0;"><a href="https://www.instagram.com/reel/DVkT0vMAQoo/" data-iframely-url="https://iframely.net/NUIyk056?theme=dark"></a></div></div>
+                        <div class="iframely-embed"><div class="iframely-responsive" ><a href="https://www.instagram.com/reel/DVkT0vMAQoo/" data-iframely-url="https://iframely.net/NUIyk056?theme=dark"></a></div></div>
                     </div>
                     <script async src="https://iframely.net/embed.js"></script>
+                </div>
+                <div class="show-more-wrap" id="videoShowMoreWrap">
+                    <button class="btn btn-outline show-more-btn" id="videoShowMore">
+                        Show More <i class="fas fa-chevron-down"></i>
+                    </button>
                 </div>
             </div>
 
             <div class="gallery-cta">
-                <a href="https://www.instagram.com/cruzcutz10/" target="_blank" class="btn btn-secondary">See more on Instagram</a>
+                <a href="https://www.instagram.com/cruzcutz10/" target="_blank" class="btn btn-outline">
+                    <i class="fab fa-instagram"></i> See All Work on Instagram
+                </a>
             </div>
         </div>
     </section>
@@ -204,124 +274,80 @@
     <!-- Reviews Section -->
     <section class="reviews section" id="reviews">
         <div class="container fade-in">
-            <h2 class="section-title">Client <span class="highlight-red">Feedback</span></h2>
-            
-            <div class="reviews-marquee-container">
-                <div class="reviews-marquee-track">
-                    <div class="review-card">
-                        <div class="stars"><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i></div>
-                        <p class="review-text">"Cleanest fade I've ever had. Attention to detail is crazy."</p>
-                        <p class="review-author">- Alex M.</p>
-                    </div>
-                    <div class="review-card">
-                        <div class="stars"><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i></div>
-                        <p class="review-text">"Always consistent and sharp cuts. Never going to anyone else."</p>
-                        <p class="review-author">- David T.</p>
-                    </div>
-                    <div class="review-card">
-                        <div class="stars"><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i></div>
-                        <p class="review-text">"Got me looking right for the weekend. Crispest edge up I've had."</p>
-                        <p class="review-author">- Jordan R.</p>
-                    </div>
-                    <div class="review-card">
-                        <div class="stars"><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i></div>
-                        <p class="review-text">"Best fade in the city. Professional and quick."</p>
-                        <p class="review-author">- Chris P.</p>
-                    </div>
-                    <div class="review-card">
-                        <div class="stars"><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i></div>
-                        <p class="review-text">"A true master of his craft. Highly recommend!"</p>
-                        <p class="review-author">- Leo B.</p>
-                    </div>
-                    <div class="review-card">
-                        <div class="stars"><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i></div>
-                        <p class="review-text">"Always delivers a flawless cut. 10/10 experience."</p>
-                        <p class="review-author">- Marcus V.</p>
-                    </div>
-                    <div class="review-card">
-                        <div class="stars"><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i></div>
-                        <p class="review-text">"My go-to barber. The taper is always perfect."</p>
-                        <p class="review-author">- Daniel K.</p>
-                    </div>
-                    <div class="review-card">
-                        <div class="stars"><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i></div>
-                        <p class="review-text">"Incredible attention to detail. Great environment."</p>
-                        <p class="review-author">- Sam W.</p>
-                    </div>
-                    <div class="review-card">
-                        <div class="stars"><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i></div>
-                        <p class="review-text">"Best lineup I've had in a long time."</p>
-                        <p class="review-author">- Kevin J.</p>
-                    </div>
-                    <div class="review-card">
-                        <div class="stars"><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i></div>
-                        <p class="review-text">"You won't find a better fade. Top tier service."</p>
-                        <p class="review-author">- Tyrese M.</p>
-                    </div>
-                    <div class="review-card">
-                        <div class="stars"><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i></div>
-                        <p class="review-text">"Fast, efficient, and perfectly executed haircut."</p>
-                        <p class="review-author">- Jason L.</p>
-                    </div>
-                    <div class="review-card">
-                        <div class="stars"><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i></div>
-                        <p class="review-text">"I always leave the chair feeling like a new man."</p>
-                        <p class="review-author">- Andre S.</p>
-                    </div>
-                    <div class="review-card">
-                        <div class="stars"><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i></div>
-                        <p class="review-text">"CruzCutz never misses. Reliable and professional."</p>
-                        <p class="review-author">- Paul F.</p>
-                    </div>
-                    
-                    <!-- Duplicates for seamless loop -->
-                    <div class="review-card">
-                        <div class="stars"><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i></div>
-                        <p class="review-text">"Cleanest fade I've ever had. Attention to detail is crazy."</p>
-                        <p class="review-author">- Alex M.</p>
-                    </div>
-                    <div class="review-card">
-                        <div class="stars"><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i></div>
-                        <p class="review-text">"Always consistent and sharp cuts. Never going to anyone else."</p>
-                        <p class="review-author">- David T.</p>
-                    </div>
-                    <div class="review-card">
-                        <div class="stars"><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i></div>
-                        <p class="review-text">"Got me looking right for the weekend. Crispest edge up I've had."</p>
-                        <p class="review-author">- Jordan R.</p>
-                    </div>
-                    <div class="review-card">
-                        <div class="stars"><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i></div>
-                        <p class="review-text">"Best fade in the city. Professional and quick."</p>
-                        <p class="review-author">- Chris P.</p>
-                    </div>
-                </div>
+            <div class="section-label">Client Love</div>
+            <h2 class="section-title">What They <span class="fire">Say</span></h2>
+        </div>
+        <div class="reviews-marquee-container">
+            <div class="reviews-marquee-track">
+                <div class="review-card"><div class="stars"><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i></div><p class="review-text">"Cleanest fade I've ever had. Attention to detail is crazy."</p><p class="review-author">— Alex M.</p></div>
+                <div class="review-card"><div class="stars"><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i></div><p class="review-text">"Always consistent and sharp cuts. Never going to anyone else."</p><p class="review-author">— David T.</p></div>
+                <div class="review-card"><div class="stars"><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i></div><p class="review-text">"Got me looking right for the weekend. Crispest edge up I've had."</p><p class="review-author">— Jordan R.</p></div>
+                <div class="review-card"><div class="stars"><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i></div><p class="review-text">"Best fade in the city. Professional and quick."</p><p class="review-author">— Chris P.</p></div>
+                <div class="review-card"><div class="stars"><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i></div><p class="review-text">"A true master of his craft. Highly recommend!"</p><p class="review-author">— Leo B.</p></div>
+                <div class="review-card"><div class="stars"><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i></div><p class="review-text">"Always delivers a flawless cut. 10/10 experience."</p><p class="review-author">— Marcus V.</p></div>
+                <div class="review-card"><div class="stars"><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i></div><p class="review-text">"My go-to barber. The taper is always perfect."</p><p class="review-author">— Daniel K.</p></div>
+                <div class="review-card"><div class="stars"><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i></div><p class="review-text">"Incredible attention to detail. Great environment."</p><p class="review-author">— Sam W.</p></div>
+                <div class="review-card"><div class="stars"><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i></div><p class="review-text">"Best lineup I've had in a long time."</p><p class="review-author">— Kevin J.</p></div>
+                <div class="review-card"><div class="stars"><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i></div><p class="review-text">"You won't find a better fade. Top tier service."</p><p class="review-author">— Tyrese M.</p></div>
+                <!-- duplicates for seamless loop -->
+                <div class="review-card"><div class="stars"><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i></div><p class="review-text">"Cleanest fade I've ever had. Attention to detail is crazy."</p><p class="review-author">— Alex M.</p></div>
+                <div class="review-card"><div class="stars"><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i></div><p class="review-text">"Always consistent and sharp cuts. Never going to anyone else."</p><p class="review-author">— David T.</p></div>
+                <div class="review-card"><div class="stars"><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i></div><p class="review-text">"Best fade in the city. Professional and quick."</p><p class="review-author">— Chris P.</p></div>
+                <div class="review-card"><div class="stars"><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i></div><p class="review-text">"A true master of his craft. Highly recommend!"</p><p class="review-author">— Leo B.</p></div>
             </div>
         </div>
     </section>
 
     <!-- Booking CTA Section -->
     <section class="booking-cta section fade-in">
-        <div class="container">
-            <h2>Book Your Cut</h2>
-            <p>Fast replies. Easy booking. Fresh cuts.</p>
-            <div class="cta-buttons">
-                <a href="#cal" class="btn btn-primary btn-large">
-                    <i class="far fa-calendar-alt"></i> Book on Cal.com
-                </a>
-                <a href="https://www.instagram.com/cruzcutz10/" target="_blank" rel="noopener noreferrer" class="btn btn-outline btn-large">
-                    <i class="fab fa-instagram"></i> DM on Instagram
-                </a>
+        <div class="booking-cta-inner">
+            <div class="cta-glow"></div>
+            <div class="container" style="position:relative;z-index:1;">
+                <div class="section-label" style="color:#ff8c2f;">Ready?</div>
+                <h2>Book Your Cut</h2>
+                <p>Fast replies. Easy booking. Fresh cuts.</p>
+                <div class="cta-buttons">
+                    <a href="#cal" class="btn btn-primary btn-large">
+                        <i class="far fa-calendar-alt"></i> Book on Cal.com
+                    </a>
+                    <a href="https://www.instagram.com/cruzcutz10/" target="_blank" rel="noopener noreferrer" class="btn btn-ghost btn-large">
+                        <i class="fab fa-instagram"></i> @cruzcutz10
+                    </a>
+                </div>
             </div>
         </div>
     </section>
 
     <!-- Footer -->
     <footer>
-        <div class="footer-content">
-            <p>Modern cuts. Sharp lines.</p>
-            <div class="social-links">
-                <a href="https://www.instagram.com/cruzcutz10/" target="_blank"><i class="fab fa-instagram"></i></a>
+        <div class="footer-top">
+            <div class="footer-brand">
+                <img src="CruzCutz.jpg" alt="CruzCutz Logo" class="footer-logo">
+                <p>Modern cuts. Sharp lines.</p>
+            </div>
+            <div class="footer-links-group">
+                <h4>Navigate</h4>
+                <ul>
+                    <li><a href="#about">About</a></li>
+                    <li><a href="#services">Services</a></li>
+                    <li><a href="#gallery">Gallery</a></li>
+                    <li><a href="#reviews">Reviews</a></li>
+                </ul>
+            </div>
+            <div class="footer-links-group">
+                <h4>Book</h4>
+                <ul>
+                    <li><a href="#cal">Cal.com</a></li>
+                    <li><a href="https://www.instagram.com/cruzcutz10/" target="_blank">Instagram DM</a></li>
+                </ul>
+            </div>
+            <div class="footer-social">
+                <h4>Follow</h4>
+                <div class="social-links">
+                    <a href="https://www.instagram.com/cruzcutz10/" target="_blank" aria-label="Instagram">
+                        <i class="fab fa-instagram"></i>
+                    </a>
+                </div>
             </div>
         </div>
         <div class="footer-bottom">
@@ -329,12 +355,12 @@
         </div>
     </footer>
 
-    <!-- Back to Top Button -->
+    <!-- Back to Top -->
     <a href="#" class="back-to-top" id="backToTop">
         <i class="fas fa-arrow-up"></i>
     </a>
 
-    <!-- Image Modal (Lightbox) -->
+    <!-- Image Modal -->
     <div id="imageModal" class="modal">
         <span class="modal-close">&times;</span>
         <img class="modal-content" id="modalImage">
