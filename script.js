@@ -55,8 +55,18 @@ document.addEventListener('DOMContentLoaded', () => {
                 obs.unobserve(entry.target);
             }
         });
-    }, { threshold: 0.12 });
+    }, { threshold: 0, rootMargin: '0px 0px -40px 0px' });
     animEls.forEach(el => observer.observe(el));
+
+    // Trigger elements already in view on load (important for GitHub Pages)
+    setTimeout(() => {
+        animEls.forEach(el => {
+            const rect = el.getBoundingClientRect();
+            if (rect.top < window.innerHeight) {
+                el.classList.add('visible');
+            }
+        });
+    }, 100);
 
     // ── Sticky Mobile CTA + Scroll Progress + Back to Top + Navbar ──
     const mobileStickyCta = document.getElementById('mobileStickyCta');

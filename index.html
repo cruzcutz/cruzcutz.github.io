@@ -54,7 +54,7 @@
     <!-- Hero Section -->
     <header class="hero" id="home">
         <div class="video-container">
-            <video autoplay muted loop playsinline class="hero-video">
+            <video autoplay muted loop playsinline preload="auto" class="hero-video" poster="CruzCutz.jpg">
                 <source src="Hero%20Background%20Desktop.mp4" type="video/mp4">
             </video>
             <div class="video-overlay"></div>
@@ -650,11 +650,10 @@
             if (!revealed) buildTexture();
         });
 
-        if (document.fonts) {
-            document.fonts.ready.then(buildTexture);
-        } else {
-            window.addEventListener('load', buildTexture);
-        }
+        // Build after full page load so wrap dimensions are correct
+        window.addEventListener('load', () => {
+            setTimeout(buildTexture, 200);
+        });
     })();
     </script>
 </body>
