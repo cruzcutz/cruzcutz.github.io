@@ -277,8 +277,27 @@ img { max-width: 100%; height: auto; }
 
 @keyframes fadeUp { to { opacity: 1; transform: translateY(0); } }
 
-.fade-in { opacity: 0; transform: translateY(24px); transition: opacity 0.8s ease-out, transform 0.8s ease-out; }
+.fade-in         { opacity: 0; transform: translateY(32px);  transition: opacity 0.75s ease-out, transform 0.75s ease-out; }
 .fade-in.visible { opacity: 1; transform: translateY(0); }
+
+/* Direction variants */
+.fade-left          { opacity: 0; transform: translateX(-40px); transition: opacity 0.75s ease-out, transform 0.75s ease-out; }
+.fade-left.visible  { opacity: 1; transform: translateX(0); }
+.fade-right         { opacity: 0; transform: translateX(40px);  transition: opacity 0.75s ease-out, transform 0.75s ease-out; }
+.fade-right.visible { opacity: 1; transform: translateX(0); }
+.fade-up            { opacity: 0; transform: translateY(48px) scale(0.97); transition: opacity 0.8s ease-out, transform 0.8s ease-out; }
+.fade-up.visible    { opacity: 1; transform: translateY(0) scale(1); }
+.fade-scale         { opacity: 0; transform: scale(0.92);        transition: opacity 0.7s ease-out, transform 0.7s ease-out; }
+.fade-scale.visible { opacity: 1; transform: scale(1); }
+
+/* Stagger delays */
+.delay-100 { transition-delay: 0.1s; }
+.delay-200 { transition-delay: 0.2s; }
+.delay-300 { transition-delay: 0.3s; }
+.delay-400 { transition-delay: 0.4s; }
+.delay-500 { transition-delay: 0.5s; }
+.delay-600 { transition-delay: 0.6s; }
+.delay-700 { transition-delay: 0.7s; }
 
 /* ─── Ticker ─── */
 .ticker-wrap {
@@ -308,8 +327,97 @@ img { max-width: 100%; height: auto; }
     100% { transform: translateX(-50%); }
 }
 
-/* ─── About / Barber Profile ─── */
-.about { background: var(--bg-1); }
+/* ─── Section Particle Canvases ─── */
+.section-particles {
+    position: absolute;
+    top: 0; left: 0;
+    width: 100%; height: 100%;
+    pointer-events: none;
+    z-index: 0;
+}
+
+/* Sections need relative positioning so canvas is contained */
+.about, .gallery { position: relative; }
+
+/* All content inside particle sections sits above the canvas */
+.about > .container,
+.gallery > .container,
+.reviews > .container,
+.reviews > .reviews-marquee-container {
+    position: relative;
+    z-index: 1;
+}
+
+/* Restore normal navbar — no canvas interference */
+.navbar { position: fixed; z-index: 100; }
+
+/* Section backgrounds — solid, canvas draws on top */
+.about    { background: var(--bg-1); }
+.services { background: var(--bg-0); }
+.gallery  { background: var(--bg-1); }
+
+/* ─── Scratch Card ─── */
+.scratch-card-wrap {
+    position: relative;
+    width: 100%;
+    aspect-ratio: 3/4;
+    border-radius: 8px;
+    overflow: hidden;
+    border: 1px solid var(--border-hover);
+    cursor: crosshair;
+    user-select: none;
+}
+.scratch-reveal-img {
+    position: absolute;
+    inset: 0;
+    width: 100%; height: 100%;
+    object-fit: cover;
+    object-position: center top;
+    display: block;
+    z-index: 0;
+}
+.scratch-canvas {
+    position: absolute;
+    inset: 0;
+    width: 100%; height: 100%;
+    z-index: 1;
+    touch-action: none;
+}
+.scratch-hint {
+    position: absolute;
+    inset: 0;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    gap: 0.6rem;
+    z-index: 2;
+    pointer-events: none;
+    transition: opacity 0.5s ease;
+}
+.scratch-hint i {
+    font-size: 2rem;
+    color: var(--orange);
+    animation: hintPulse 1.6s ease-in-out infinite;
+}
+.scratch-hint span {
+    font-size: 0.78rem;
+    font-weight: 700;
+    letter-spacing: 0.18em;
+    text-transform: uppercase;
+    color: var(--text-main);
+}
+.scratch-hint.hidden { opacity: 0; }
+.hint-desktop { display: none; }
+.hint-mobile  { display: inline; }
+@media (min-width: 769px) {
+    .hint-desktop { display: inline; }
+    .hint-mobile  { display: none; }
+}
+@keyframes hintPulse {
+    0%, 100% { transform: scale(1) translateY(0); opacity: 0.7; }
+    50% { transform: scale(1.15) translateY(-3px); opacity: 1; }
+}
 
 .barber-profile {
     display: grid;
@@ -428,8 +536,38 @@ img { max-width: 100%; height: auto; }
 .specialty-tag i { color: var(--orange); font-size: 0.85rem; }
 .specialty-tag:hover { border-color: var(--border-hover); color: var(--text-main); }
 
-/* ─── Services ─── */
-.services { background: var(--bg-0); }
+/* ─── Services Category Label ─── */
+.services-category-label {
+    font-family: var(--font-display);
+    font-size: 1.3rem;
+    letter-spacing: 0.2em;
+    color: var(--text-muted);
+    margin-bottom: 1.75rem;
+    text-align: center;
+}
+
+/* ─── Service Image with real img tag ─── */
+.service-img-wrap {
+    height: 230px;
+    overflow: hidden;
+    position: relative;
+    background: var(--bg-card);
+}
+.service-img-real {
+    width: 100%; height: 100%;
+    object-fit: cover;
+    object-position: center top;
+    display: block;
+    transition: transform 0.5s ease;
+    cursor: pointer;
+}
+.service-card:hover .service-img-real { transform: scale(1.05); }
+.service-img-wrap::after {
+    content: '';
+    position: absolute; inset: 0;
+    background: linear-gradient(0deg, rgba(12,11,9,0.7) 0%, transparent 50%);
+    pointer-events: none;
+}
 
 .services-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); gap: 1.5rem; }
 
@@ -556,8 +694,8 @@ img { max-width: 100%; height: auto; }
 .gallery-cta { text-align: center; margin-top: 3rem; }
 
 /* ─── Reviews ─── */
-.reviews { background: var(--bg-0); overflow: hidden; }
-.reviews .container { margin-bottom: 3rem; }
+.reviews { background: var(--bg-0); overflow: hidden; padding: 5rem 0 0; }
+.reviews .container { margin-bottom: 1rem; }
 
 .reviews-marquee-container { overflow: hidden; width: 100%; padding: 1rem 0; }
 .reviews-marquee-track {
@@ -598,14 +736,15 @@ img { max-width: 100%; height: auto; }
 }
 
 /* ─── Booking CTA ─── */
-.booking-cta { padding: 0; }
+.booking-cta { padding: 0 !important; margin: 0 !important; }
+.booking-cta.section { padding: 0 !important; }
 .booking-cta-inner {
     position: relative;
     background: var(--bg-1);
     border-top: 1px solid var(--border);
     border-bottom: 1px solid var(--border);
     text-align: center;
-    padding: 7rem 0;
+    padding: 5rem 0;
     overflow: hidden;
 }
 .cta-glow {

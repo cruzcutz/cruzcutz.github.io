@@ -47,7 +47,7 @@ document.addEventListener('DOMContentLoaded', () => {
     });
 
     // ── Scroll Animations ──
-    const fadeEls = document.querySelectorAll('.fade-in');
+    const animEls = document.querySelectorAll('.fade-in, .fade-left, .fade-right, .fade-up, .fade-scale');
     const observer = new IntersectionObserver((entries, obs) => {
         entries.forEach(entry => {
             if (entry.isIntersecting) {
@@ -55,8 +55,8 @@ document.addEventListener('DOMContentLoaded', () => {
                 obs.unobserve(entry.target);
             }
         });
-    }, { threshold: 0.15 });
-    fadeEls.forEach(el => observer.observe(el));
+    }, { threshold: 0.12 });
+    animEls.forEach(el => observer.observe(el));
 
     // ── Sticky Mobile CTA + Scroll Progress + Back to Top + Navbar ──
     const mobileStickyCta = document.getElementById('mobileStickyCta');

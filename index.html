@@ -127,16 +127,23 @@
 
     <!-- About Section -->
     <section class="about section" id="about">
-        <div class="container fade-in">
-            <div class="section-label">The Barber</div>
-            <h2 class="section-title">Meet <span class="fire">Jareld</span></h2>
+        <canvas class="section-particles" data-section="about"></canvas>
+        <div class="container">
+            <div class="section-label fade-in">The Barber</div>
+            <h2 class="section-title fade-in delay-100">Meet <span class="fire">Jareld</span></h2>
 
             <div class="barber-profile">
-                <div class="barber-photo-wrap">
-                    <div class="barber-photo-frame">
-                        <img src="Jareld.png" alt="Jareld - CruzCutz Barber" class="barber-photo">
+                <div class="barber-photo-wrap fade-left">
+                    <div class="scratch-card-wrap">
+                        <img src="Jareld.png" alt="Jareld" class="scratch-reveal-img">
+                        <canvas id="scratchCanvas" class="scratch-canvas"></canvas>
+                        <div class="scratch-hint" id="scratchHint">
+                            <i class="fas fa-hand-pointer"></i>
+                            <span class="hint-mobile">Scratch to reveal</span>
+                            <span class="hint-desktop">Hover to reveal</span>
+                        </div>
                     </div>
-                    <div class="barber-ig-badge">
+                    <div class="barber-ig-badge fade-in delay-300">
                         <a href="https://www.instagram.com/cruzcutz10/" target="_blank" rel="noopener noreferrer">
                             <i class="fab fa-instagram"></i>
                             <span>@cruzcutz10</span>
@@ -145,17 +152,14 @@
                 </div>
 
                 <div class="barber-info">
-                    <h3 class="barber-name">Jareld</h3>
-                    <p class="barber-title">Independent Barber</p>
-
-                    <p class="barber-bio">Passionate about the craft since day one. I specialize in clean skin fades, sharp lineups, and textured scissor cuts — tailored to your style, your head shape, your vibe. Every client leaves the chair looking and feeling fresh. No sloppy cuts, no wasted time.</p>
-
-
-                    <div class="barber-specialties">
-                        <span class="specialty-tag"><i class="fas fa-cut"></i> Skin Fades</span>
-                        <span class="specialty-tag"><i class="fas fa-ruler"></i> Sharp Lineups</span>
-                        <span class="specialty-tag"><i class="fas fa-scissors"></i> Scissor Cuts</span>
-                        <span class="specialty-tag"><i class="fas fa-fire"></i> Taper Fades</span>
+                    <h3 class="barber-name fade-right delay-100">Jareld</h3>
+                    <p class="barber-title fade-right delay-200">Independent Barber</p>
+                    <p class="barber-bio fade-in delay-300">Passionate about the craft since day one. I specialize in clean skin fades, sharp lineups, and textured scissor cuts — tailored to your style, your head shape, your vibe. Every client leaves the chair looking and feeling fresh. No sloppy cuts, no wasted time.</p>
+                    <div class="barber-specialties fade-in delay-400">
+                        <span class="specialty-tag"><i class="fas fa-cut"></i> Low Tapers</span>
+                        <span class="specialty-tag"><i class="fas fa-cut"></i> Mid Tapers</span>
+                        <span class="specialty-tag"><i class="fas fa-cut"></i> High Tapers</span>
+                        <span class="specialty-tag"><i class="fas fa-fire"></i> Mullets</span>
                     </div>
                 </div>
             </div>
@@ -164,32 +168,75 @@
 
     <!-- Services Section -->
     <section class="services section" id="services">
-        <div class="container fade-in">
-            <div class="section-label">What We Do</div>
-            <h2 class="section-title">Premium <span class="fire">Services</span></h2>
+        <div class="container">
+            <div class="section-label fade-in">What We Do</div>
+            <h2 class="section-title fade-in delay-100">Premium <span class="fire">Services</span></h2>
+
+            <div class="services-category-label fade-in delay-200">— Tapers —</div>
             <div class="services-grid">
-                <div class="service-card">
-                    <div class="service-img" style="background-image: url('skinfade.png');"></div>
+                <div class="service-card fade-up delay-100">
+                    <div class="service-img-wrap">
+                        <img src="Low Taper.webp" alt="Low Taper" class="service-img-real">
+                    </div>
                     <div class="service-content">
                         <div class="service-tag">Most Popular</div>
-                        <h3>Skin Fade</h3>
-                        <p>Flawless skin tight fades perfected to your head shape.</p>
+                        <h3>Low Taper</h3>
+                        <p>Subtle and sharp. Fades low near the ear for a clean, natural finish every time.</p>
                         <a href="https://www.instagram.com/cruzcutz10/" target="_blank" class="service-link">DM for Price <i class="fas fa-arrow-right"></i></a>
                     </div>
                 </div>
-                <div class="service-card">
-                    <div class="service-img" style="background-image: url('tapefade.webp');"></div>
+                <div class="service-card fade-up delay-200">
+                    <div class="service-img-wrap">
+                        <img src="Mid Taper.jpeg" alt="Mid Taper" class="service-img-real">
+                    </div>
                     <div class="service-content">
-                        <h3>Taper Fade</h3>
-                        <p>Clean and modern tapers leaving natural volume on top.</p>
+                        <h3>Mid Taper</h3>
+                        <p>The perfect balance — fades mid-ear for a versatile everyday look.</p>
                         <a href="https://www.instagram.com/cruzcutz10/" target="_blank" class="service-link">DM for Price <i class="fas fa-arrow-right"></i></a>
                     </div>
                 </div>
-                <div class="service-card">
-                    <div class="service-img" style="background-image: url('scissorwork.jpg');"></div>
+                <div class="service-card fade-up delay-300">
+                    <div class="service-img-wrap">
+                        <img src="High Taper.webp" alt="High Taper" class="service-img-real">
+                    </div>
                     <div class="service-content">
-                        <h3>Scissor Cut</h3>
-                        <p>Classic scissor work for texture, length, and perfect flow.</p>
+                        <h3>High Taper</h3>
+                        <p>Bold and dramatic. A high fade that commands attention from every angle.</p>
+                        <a href="https://www.instagram.com/cruzcutz10/" target="_blank" class="service-link">DM for Price <i class="fas fa-arrow-right"></i></a>
+                    </div>
+                </div>
+            </div>
+
+            <div class="services-category-label fade-in delay-100" style="margin-top:3.5rem;">— Mullets —</div>
+            <div class="services-grid">
+                <div class="service-card fade-up delay-100">
+                    <div class="service-img-wrap">
+                        <img src="Classic Mullet.webp" alt="Classic Mullet" class="service-img-real">
+                    </div>
+                    <div class="service-content">
+                        <div class="service-tag">Signature</div>
+                        <h3>Classic Mullet</h3>
+                        <p>Business up front, party in the back. The iconic statement cut, done right.</p>
+                        <a href="https://www.instagram.com/cruzcutz10/" target="_blank" class="service-link">DM for Price <i class="fas fa-arrow-right"></i></a>
+                    </div>
+                </div>
+                <div class="service-card fade-up delay-200">
+                    <div class="service-img-wrap">
+                        <img src="Modern Mullet.jpg" alt="Modern Mullet" class="service-img-real">
+                    </div>
+                    <div class="service-content">
+                        <h3>Modern Mullet</h3>
+                        <p>Tapered sides with flowing length in the back. The new wave of edge.</p>
+                        <a href="https://www.instagram.com/cruzcutz10/" target="_blank" class="service-link">DM for Price <i class="fas fa-arrow-right"></i></a>
+                    </div>
+                </div>
+                <div class="service-card fade-up delay-300">
+                    <div class="service-img-wrap">
+                        <img src="Curly Mullet.webp" alt="Curly Mullet" class="service-img-real">
+                    </div>
+                    <div class="service-content">
+                        <h3>Curly Mullet</h3>
+                        <p>Natural curls meet clean edges. Volume on top, taper on the sides.</p>
                         <a href="https://www.instagram.com/cruzcutz10/" target="_blank" class="service-link">DM for Price <i class="fas fa-arrow-right"></i></a>
                     </div>
                 </div>
@@ -199,24 +246,25 @@
 
     <!-- Gallery Section -->
     <section class="gallery section" id="gallery">
-        <div class="container fade-in">
-            <div class="section-label">The Work</div>
-            <h2 class="section-title">The <span class="fire">Gallery</span></h2>
+        <canvas class="section-particles" data-section="gallery"></canvas>
+        <div class="container">
+            <div class="section-label fade-in">The Work</div>
+            <h2 class="section-title fade-in delay-100">The <span class="fire">Gallery</span></h2>
 
-            <div class="gallery-tabs">
+            <div class="gallery-tabs fade-in delay-200">
                 <button class="tab-btn active" data-target="photos">Photos</button>
                 <button class="tab-btn" data-target="videos">Videos</button>
             </div>
 
             <div class="gallery-content" id="photos">
                 <div class="gallery-grid" id="photoGrid">
-                    <div class="gallery-item"><img src="Curly fade cut.png" alt="Curly fade cut"></div>
-                    <div class="gallery-item"><img src="Taper fade back view.png" alt="Taper fade back view"></div>
-                    <div class="gallery-item"><img src="Mid fade side view.png" alt="Mid fade side view"></div>
-                    <div class="gallery-item"><img src="Skin fade side profile.png" alt="Skin fade side profile"></div>
-                    <div class="gallery-item"><img src="Textured cut back view.png" alt="Textured cut back view"></div>
-                    <div class="gallery-item"><img src="Curly taper fade.png" alt="Curly taper fade"></div>
-                    <div class="gallery-item"><img src="Low fade side view.png" alt="Low fade side view"></div>
+                    <div class="gallery-item fade-up delay-100"><img src="Curly fade cut.png" alt="Curly fade cut"></div>
+                    <div class="gallery-item fade-up delay-200"><img src="Taper fade back view.png" alt="Taper fade back view"></div>
+                    <div class="gallery-item fade-up delay-300"><img src="Mid fade side view.png" alt="Mid fade side view"></div>
+                    <div class="gallery-item fade-up delay-200"><img src="Skin fade side profile.png" alt="Skin fade side profile"></div>
+                    <div class="gallery-item fade-up delay-300"><img src="Textured cut back view.png" alt="Textured cut back view"></div>
+                    <div class="gallery-item fade-up delay-400"><img src="Curly taper fade.png" alt="Curly taper fade"></div>
+                    <div class="gallery-item fade-up delay-300"><img src="Low fade side view.png" alt="Low fade side view"></div>
                 </div>
                 <div class="show-more-wrap" id="photoShowMoreWrap">
                     <button class="btn btn-outline show-more-btn" id="photoShowMore">
@@ -273,9 +321,9 @@
 
     <!-- Reviews Section -->
     <section class="reviews section" id="reviews">
-        <div class="container fade-in">
-            <div class="section-label">Client Love</div>
-            <h2 class="section-title">What They <span class="fire">Say</span></h2>
+        <div class="container">
+            <div class="section-label fade-in">Client Love</div>
+            <h2 class="section-title fade-in delay-100">What They <span class="fire">Say</span></h2>
         </div>
         <div class="reviews-marquee-container">
             <div class="reviews-marquee-track">
@@ -299,14 +347,14 @@
     </section>
 
     <!-- Booking CTA Section -->
-    <section class="booking-cta section fade-in">
+    <section class="booking-cta" id="booking">
         <div class="booking-cta-inner">
             <div class="cta-glow"></div>
             <div class="container" style="position:relative;z-index:1;">
-                <div class="section-label" style="color:#ff8c2f;">Ready?</div>
-                <h2>Book Your Cut</h2>
-                <p>Fast replies. Easy booking. Fresh cuts.</p>
-                <div class="cta-buttons">
+                <div class="section-label fade-in" style="color:#ff8c2f; justify-content:center;">Ready?</div>
+                <h2 class="fade-in delay-100">Book Your Cut</h2>
+                <p class="fade-in delay-200">Fast replies. Easy booking. Fresh cuts.</p>
+                <div class="cta-buttons fade-in delay-300">
                     <a href="#cal" class="btn btn-primary btn-large">
                         <i class="far fa-calendar-alt"></i> Book on Cal.com
                     </a>
@@ -367,5 +415,247 @@
     </div>
 
     <script src="script.js"></script>
+    <script>
+    (function() {
+        const mouse = { x: -9999, y: -9999 };
+        window.addEventListener('mousemove', e => { mouse.x = e.clientX; mouse.y = e.clientY; });
+        window.addEventListener('mouseleave', () => { mouse.x = -9999; mouse.y = -9999; });
+
+        function initCanvas(canvas) {
+            const ctx = canvas.getContext('2d');
+            const section = canvas.parentElement;
+            let W, H, particles;
+            const COUNT = window.innerWidth < 768 ? 20 : 40;
+            const MAX_DIST = 80;
+            const MOUSE_RADIUS = 120;
+            const MOUSE_PULL = 0.014;
+
+            function resize() {
+                const rect = section.getBoundingClientRect();
+                W = canvas.width  = section.offsetWidth;
+                H = canvas.height = section.offsetHeight;
+            }
+
+            function rand(a, b) { return a + Math.random() * (b - a); }
+
+            function mkParticle() {
+                return {
+                    x: Math.random() * W,
+                    y: Math.random() * H,
+                    vx: rand(-0.15, 0.15),
+                    vy: rand(-0.15, 0.15),
+                    r: rand(1, 2),
+                    orange: Math.random() > 0.55
+                };
+            }
+
+            function init() { resize(); particles = Array.from({ length: COUNT }, mkParticle); }
+
+            function tick() {
+                ctx.clearRect(0, 0, W, H);
+
+                // Get canvas position relative to viewport for mouse offset
+                const rect = canvas.getBoundingClientRect();
+                const lx = mouse.x - rect.left;
+                const ly = mouse.y - rect.top;
+
+                for (const p of particles) {
+                    const dx = lx - p.x, dy = ly - p.y;
+                    const d = Math.sqrt(dx*dx + dy*dy);
+                    if (d < MOUSE_RADIUS) {
+                        p.vx += dx * MOUSE_PULL * (1 - d / MOUSE_RADIUS);
+                        p.vy += dy * MOUSE_PULL * (1 - d / MOUSE_RADIUS);
+                    }
+                    const spd = Math.sqrt(p.vx*p.vx + p.vy*p.vy);
+                    if (spd > 1.2) { p.vx *= 0.95; p.vy *= 0.95; }
+                    p.vx *= 0.999; p.vy *= 0.999;
+                    if (spd < 0.04) { p.vx += rand(-0.02, 0.02); p.vy += rand(-0.02, 0.02); }
+                    p.x += p.vx; p.y += p.vy;
+                    if (p.x < 0) p.x = W; if (p.x > W) p.x = 0;
+                    if (p.y < 0) p.y = H; if (p.y > H) p.y = 0;
+                }
+
+                // Lines
+                for (let i = 0; i < particles.length; i++) {
+                    for (let j = i + 1; j < particles.length; j++) {
+                        const a = particles[i], b = particles[j];
+                        const dx = a.x - b.x, dy = a.y - b.y;
+                        const d = Math.sqrt(dx*dx + dy*dy);
+                        if (d < MAX_DIST) {
+                            const alpha = (1 - d / MAX_DIST) * 0.1;
+                            ctx.strokeStyle = (a.orange || b.orange)
+                                ? `rgba(255,107,26,${alpha})`
+                                : `rgba(200,190,175,${alpha * 0.5})`;
+                            ctx.lineWidth = 0.6;
+                            ctx.beginPath(); ctx.moveTo(a.x, a.y); ctx.lineTo(b.x, b.y); ctx.stroke();
+                        }
+                    }
+                }
+
+                // Dots
+                for (const p of particles) {
+                    const dx = lx - p.x, dy = ly - p.y;
+                    const near = Math.sqrt(dx*dx + dy*dy) < MOUSE_RADIUS;
+                    ctx.beginPath();
+                    ctx.arc(p.x, p.y, p.r, 0, Math.PI * 2);
+                    ctx.fillStyle = p.orange
+                        ? `rgba(255,107,26,${near ? 0.5 : 0.18})`
+                        : `rgba(200,190,175,${near ? 0.3 : 0.1})`;
+                    ctx.fill();
+                }
+
+                requestAnimationFrame(tick);
+            }
+
+            window.addEventListener('resize', () => { resize(); });
+            init();
+            tick();
+        }
+
+        document.querySelectorAll('.section-particles').forEach(initCanvas);
+    })();
+
+    // ── Scratch Card ──
+    (function() {
+        const canvas = document.getElementById('scratchCanvas');
+        const hint   = document.getElementById('scratchHint');
+        if (!canvas) return;
+
+        const wrap = canvas.parentElement;
+        const ctx  = canvas.getContext('2d');
+        let revealed    = false;
+        let isDesktop   = window.innerWidth > 768;
+
+        // Touch-only state
+        let touchScratching = false;
+
+        function buildTexture() {
+            const W = wrap.offsetWidth;
+            const H = wrap.offsetHeight;
+            canvas.width  = W;
+            canvas.height = H;
+
+            ctx.fillStyle = '#0e0c08';
+            ctx.fillRect(0, 0, W, H);
+
+            // Grain noise
+            for (let i = 0; i < W * H * 0.35; i++) {
+                const x = Math.random() * W;
+                const y = Math.random() * H;
+                ctx.fillStyle = `rgba(255,107,26,${Math.random() * 0.25})`;
+                ctx.fillRect(x, y, 1, 1);
+            }
+
+            // Scratch mark lines
+            ctx.globalAlpha = 0.07;
+            ctx.strokeStyle = '#ff6b1a';
+            ctx.lineWidth = 1;
+            for (let i = 0; i < 60; i++) {
+                const x = Math.random() * W;
+                const y = Math.random() * H;
+                ctx.beginPath();
+                ctx.moveTo(x, y);
+                ctx.lineTo(x + (Math.random() - 0.5) * 80, y + (Math.random() - 0.5) * 80);
+                ctx.stroke();
+            }
+            ctx.globalAlpha = 1;
+
+            // Watermark
+            ctx.globalAlpha = 0.12;
+            ctx.fillStyle   = '#ff6b1a';
+            ctx.font        = `bold ${W * 0.11}px 'Bebas Neue', sans-serif`;
+            ctx.textAlign   = 'center';
+            ctx.textBaseline = 'middle';
+            ctx.fillText('CRUZCUTZ', W / 2, H / 2 - 18);
+            ctx.font = `${W * 0.055}px 'DM Sans', sans-serif`;
+            ctx.fillText('Scratch to reveal', W / 2, H / 2 + W * 0.07);
+            ctx.globalAlpha = 1;
+        }
+
+        function getPos(e) {
+            const rect   = canvas.getBoundingClientRect();
+            const scaleX = canvas.width  / rect.width;
+            const scaleY = canvas.height / rect.height;
+            if (e.touches) {
+                return {
+                    x: (e.touches[0].clientX - rect.left) * scaleX,
+                    y: (e.touches[0].clientY - rect.top)  * scaleY
+                };
+            }
+            return {
+                x: (e.clientX - rect.left) * scaleX,
+                y: (e.clientY - rect.top)  * scaleY
+            };
+        }
+
+        function doScratch(x, y) {
+            if (revealed) return;
+            hint.classList.add('hidden');
+            ctx.globalCompositeOperation = 'destination-out';
+            ctx.beginPath();
+            ctx.arc(x, y, 28, 0, Math.PI * 2);
+            ctx.fill();
+            ctx.globalCompositeOperation = 'source-over';
+            checkReveal();
+        }
+
+        function checkReveal() {
+            const data = ctx.getImageData(0, 0, canvas.width, canvas.height).data;
+            let cleared = 0;
+            for (let i = 3; i < data.length; i += 32 * 4) {
+                if (data[i] < 128) cleared++;
+            }
+            const pct = cleared / (data.length / (32 * 4));
+            if (pct > 0.55) {
+                revealed = true;
+                ctx.clearRect(0, 0, canvas.width, canvas.height);
+            }
+        }
+
+        // ── DESKTOP: hover scratches ──
+        canvas.addEventListener('mousemove', e => {
+            if (!isDesktop || revealed) return;
+            const { x, y } = getPos(e);
+            doScratch(x, y);
+        });
+
+        // ── MOBILE: touch to scratch + lock scroll ──
+        canvas.addEventListener('touchstart', e => {
+            if (isDesktop) return;
+            touchScratching = true;
+            document.body.style.overflow = 'hidden'; // lock scroll
+            const { x, y } = getPos(e);
+            doScratch(x, y);
+        }, { passive: true });
+
+        canvas.addEventListener('touchmove', e => {
+            if (!touchScratching || revealed) return;
+            e.preventDefault(); // block scroll while scratching
+            const { x, y } = getPos(e);
+            doScratch(x, y);
+        }, { passive: false });
+
+        canvas.addEventListener('touchend', () => {
+            touchScratching = false;
+            document.body.style.overflow = ''; // restore scroll
+        });
+
+        canvas.addEventListener('touchcancel', () => {
+            touchScratching = false;
+            document.body.style.overflow = '';
+        });
+
+        window.addEventListener('resize', () => {
+            isDesktop = window.innerWidth > 768;
+            if (!revealed) buildTexture();
+        });
+
+        if (document.fonts) {
+            document.fonts.ready.then(buildTexture);
+        } else {
+            window.addEventListener('load', buildTexture);
+        }
+    })();
+    </script>
 </body>
 </html>
