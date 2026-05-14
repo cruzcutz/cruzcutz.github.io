@@ -26,7 +26,20 @@ document.addEventListener('DOMContentLoaded', () => {
         });
     }
 
-    // ── Current Year ──
+    // ── Force Hero Video Play ──
+    const heroVideo = document.querySelector('.hero-video');
+    if (heroVideo) {
+        heroVideo.muted = true;
+        heroVideo.playsInline = true;
+        const playPromise = heroVideo.play();
+        if (playPromise !== undefined) {
+            playPromise.catch(() => {
+                // Autoplay blocked — try again on first user interaction
+                document.addEventListener('click', () => heroVideo.play(), { once: true });
+                document.addEventListener('touchstart', () => heroVideo.play(), { once: true });
+            });
+        }
+    }
     const yearSpan = document.getElementById('year');
     if (yearSpan) yearSpan.textContent = new Date().getFullYear();
 
